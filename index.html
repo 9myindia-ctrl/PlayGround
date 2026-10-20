@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="NaukriDesk - Find the latest government jobs, admit cards, results, answer keys, college and school updates all in one place.">
+  <title>NaukriDesk - Sarkari Naukri, Sab Ke Liye</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-id-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M6 17c0-1.5 1-2.5 2-2.5s2 1 2 2.5M14 9h6M14 13h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><path d="M2.6 17.4A2 2 0 0 0 2 18.8V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.2a2 2 0 0 0 1.4-.6l.8-.8a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+    <symbol id="i-school" viewBox="0 0 24 24"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 3.5 1.7a1 1 0 0 1 .5.9V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4a1 1 0 0 1 .5-.9L6 10"/><path d="M18 5v17M6 5v17"/><path d="m4 6 7.1-3.6a2 2 0 0 1 1.8 0L20 6"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3Z"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-9 5.7a2 2 0 0 1-2 0L2 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.3A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.2 2.3h3.3l-7.2 8.3 8.5 11.1h-6.7l-5.2-6.8-6 6.8H1.6l7.7-8.8L1.2 2.3H8l4.7 6.2ZM17.1 19.8h1.8L7 4.1H5.1Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-xmark" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49 49 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49 49 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z" fill="currentColor"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="NaukriDesk home">
+        <span class="brand-name"><span class="brand-blue">Naukri</span><span class="brand-yellow">Desk</span> <span class="flag">🇮🇳</span></span>
+        <span class="brand-tagline">Sarkari Naukri,<br>Sab Ke Liye</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#latest">Latest Jobs</a>
+        <a href="#admit-card">Admit Card</a>
+        <a href="#result">Results</a>
+        <a href="#answer-key">Answer Key</a>
+        <a href="#college">College</a>
+        <a href="#school">School</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="headerSearch" type="button" aria-label="Search">
+          <svg aria-hidden="true"><use href="#i-search"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn" id="notifyBtn" type="button" aria-label="Notifications, 2 unread">
+          <svg aria-hidden="true"><use href="#i-bell"/></svg>
+          <span class="badge" id="notifyBadge">2</span>
+        </button>
+        <button class="icon-btn" id="profileBtn" type="button" aria-label="Your profile">
+          <svg aria-hidden="true"><use href="#i-user"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="live-pill"><span class="dot"></span> Latest Updates</span>
+          <h1>Sarkari Naukri,<br><span>Ab Aur Bhi Aasaan!</span></h1>
+          <p>Find the latest government jobs, admit cards, results, answer keys and more — all in one place.</p>
+          <div class="hero-actions">
+            <a class="btn btn-yellow" href="#updates">Explore Jobs Now <svg aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <button class="btn btn-outline" type="button" data-jump="admit-card">Admit Card Check Karein</button>
+          </div>
+          <ul class="trust">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg> Free</li>
+            <li>No login required</li>
+            <li>Updated regularly</li>
+          </ul>
+        </div>
+
+        <aside class="live-card" aria-label="Live updates">
+          <div class="live-head">
+            <div class="live-title"><span class="live-dot"></span> Live Updates</div>
+            <span class="now-badge">Abhi</span>
+          </div>
+          <ul class="live-list">
+            <li>
+              <span class="live-tag tag-red">Admit<br>Card</span>
+              <div class="live-info">
+                <h3>SSC CGL Tier 1 Admit Card 2025</h3>
+                <p>Last date: 10 May 2025</p>
+              </div>
+              <span class="live-time time-red">1 day left</span>
+            </li>
+            <li>
+              <span class="live-tag tag-green">Result</span>
+              <div class="live-info">
+                <h3>IBPS PO Prelims Result 2025</h3>
+                <p>Declared: 20 May 2025</p>
+              </div>
+              <span class="live-time time-gray">3 days ago</span>
+            </li>
+            <li>
+              <span class="live-tag tag-amber">Answer<br>Key</span>
+              <div class="live-info">
+                <h3>RRB NTPC Answer Key 2025</h3>
+                <p>Published: 20 May 2025</p>
+              </div>
+              <span class="live-time time-amber">5 days ago</span>
+            </li>
+          </ul>
+          <a class="live-foot" href="#updates">Sab updates dekhein <svg aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </aside>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-icon stat-blue"><svg aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+          <div><b>10,000+</b><span>Active Jobs</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon stat-green"><svg aria-hidden="true"><use href="#i-users"/></svg></span>
+          <div><b>50 Lakh+</b><span>Users</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon stat-orange"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+          <div><b>500+</b><span>Categories</span></div>
+        </div>
+      </div>
+
+      <div class="search-wrap">
+        <form class="search-bar" id="searchForm" role="search">
+          <svg class="search-icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <label for="searchInput" class="sr-only">Search jobs, exams, results, admit cards</label>
+          <input type="search" id="searchInput" placeholder="Search jobs, exams, results, admit cards..." autocomplete="off">
+          <button type="submit">Search</button>
+        </form>
+        <div class="trending" aria-label="Trending searches">
+          <span class="trending-label"><svg aria-hidden="true"><use href="#i-trending"/></svg> Trending:</span>
+          <button type="button" class="trend-chip">SSC</button>
+          <button type="button" class="trend-chip">Banking</button>
+          <button type="button" class="trend-chip">Railway</button>
+          <button type="button" class="trend-chip">UPSC</button>
+          <button type="button" class="trend-chip">Teaching</button>
+          <button type="button" class="trend-chip">Defence</button>
+          <button type="button" class="trend-chip">Police</button>
+          <button type="button" class="trend-chip">Medical</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="content" id="updates">
+      <div class="container">
+        <div class="results-head">
+          <p class="results-count">Showing <strong id="resultCount">36</strong> results</p>
+          <button class="filters-btn" id="filterToggle" type="button" aria-expanded="true" aria-controls="filterPanel">
+            <svg aria-hidden="true"><use href="#i-sliders"/></svg> Filters
+          </button>
+        </div>
+
+        <div class="filter-panel" id="filterPanel">
+          <div class="filter-head">
+            <div class="filter-title-wrap">
+              <span class="filter-badge"><svg aria-hidden="true"><use href="#i-filter"/></svg></span>
+              <div>
+                <h2>Advanced Filter</h2>
+                <p>Find the right opportunity in just a few clicks</p>
+              </div>
+            </div>
+            <button class="clear-all" id="clearFilters" type="button">
+              <svg aria-hidden="true"><use href="#i-xmark"/></svg> Clear All
+            </button>
+          </div>
+          <div class="filter-grid">
+            <label class="field">
+              <span>Select State</span>
+              <div class="select-wrap">
+                <select id="stateFilter">
+                  <option value="">Choose State</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Delhi</option>
+                  <option>Bihar</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Rajasthan</option>
+                  <option>Tamil Nadu</option>
+                  <option>All India</option>
+                </select>
+                <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+            </label>
+            <label class="field">
+              <span>Select Type</span>
+              <div class="select-wrap">
+                <select id="typeFilter">
+                  <option value="">Choose Type</option>
+                  <option>Latest Jobs</option>
+                  <option>Admit Card</option>
+                  <option>Result</option>
+                  <option>College</option>
+                  <option>Answer Key</option>
+                  <option>School</option>
+                </select>
+                <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+            </label>
+            <label class="field">
+              <span>Select Category</span>
+              <div class="select-wrap">
+                <select id="categoryFilter">
+                  <option value="all">All Categories</option>
+                  <option value="latest">Latest Jobs</option>
+                  <option value="admit-card">Admit Card</option>
+                  <option value="result">Result</option>
+                  <option value="college">College</option>
+                  <option value="answer-key">Answer Key</option>
+                  <option value="school">School</option>
+                </select>
+                <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+            </label>
+            <label class="field">
+              <span>Popular Exam</span>
+              <div class="select-wrap">
+                <select id="examFilter">
+                  <option value="">Select Exam</option>
+                  <option>SSC CGL</option>
+                  <option>SSC CHSL</option>
+                  <option>IBPS PO</option>
+                  <option>RRB NTPC</option>
+                  <option>UPSC CSE</option>
+                  <option>NEET UG</option>
+                  <option>CTET</option>
+                </select>
+                <svg aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+            </label>
+          </div>
+          <button class="apply-btn" id="applyFilters" type="button">
+            <svg aria-hidden="true"><use href="#i-filter"/></svg> Apply Filters
+          </button>
+        </div>
+
+        <div class="chips" id="categoryChips" role="tablist" aria-label="Update categories">
+          <button class="chip active" type="button" data-filter="all" role="tab" aria-selected="true">All <b>36</b></button>
+          <button class="chip" type="button" data-filter="latest" role="tab" aria-selected="false">Latest Jobs <b>6</b></button>
+          <button class="chip" type="button" data-filter="admit-card" role="tab" aria-selected="false">Admit Card <b>6</b></button>
+          <button class="chip" type="button" data-filter="result" role="tab" aria-selected="false">Result <b>6</b></button>
+          <button class="chip" type="button" data-filter="college" role="tab" aria-selected="false">College <b>6</b></button>
+          <button class="chip" type="button" data-filter="answer-key" role="tab" aria-selected="false">Answer Key <b>6</b></button>
+          <button class="chip" type="button" data-filter="school" role="tab" aria-selected="false">School <b>6</b></button>
+        </div>
+
+        <div class="category-grid" id="categoryGrid"></div>
+        <div class="empty-state" id="emptyState">
+          <svg aria-hidden="true"><use href="#i-search"/></svg>
+          <h3>No updates found</h3>
+          <p>Try a different keyword or clear the filters.</p>
+          <button type="button" id="emptyReset">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="whatsapp-section" id="whatsapp">
+      <div class="container">
+        <div class="whatsapp-card">
+          <div class="wa-info">
+            <div class="wa-info-top">
+              <span class="wa-icon"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+              <div>
+                <h2>Get all updates on WhatsApp</h2>
+                <p>Enter your WhatsApp number and we'll send the latest updates directly to you.</p>
+              </div>
+            </div>
+            <span class="wa-badge"><svg aria-hidden="true"><use href="#i-check"/></svg> 50,000+ log already subscribed</span>
+          </div>
+          <form class="wa-form" id="waForm" novalidate>
+            <label for="waNumber">WhatsApp Number</label>
+            <div class="phone-field">
+              <span class="phone-prefix">+91</span>
+              <input type="tel" id="waNumber" inputmode="numeric" maxlength="10" placeholder="Apna 10 digit number" autocomplete="tel-national">
+            </div>
+            <label for="waMessage">Message (Optional)</label>
+            <textarea id="waMessage" maxlength="200" placeholder="Type your message here..."></textarea>
+            <span class="char-count"><span id="charCount">0</span>/200</span>
+            <p class="form-error" id="waError" role="alert"></p>
+            <button class="wa-submit" type="submit" id="waSubmit">Free Alerts Pao <svg aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="#" aria-label="NaukriDesk home">
+          <span class="brand-name"><span class="brand-blue">Naukri</span><span class="brand-yellow">Desk</span> <span class="flag">🇮🇳</span></span>
+        </a>
+        <p>NaukriDesk is India's most trusted platform for Sarkari Naukri updates. We provide real-time updates on jobs, admit cards, results, answer keys and more — all in one place.</p>
+        <h3 class="footer-label">Follow us on</h3>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+        </div>
+        <h3 class="footer-label contact-label">Contact us</h3>
+        <ul class="contact-list">
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg> support@naukridesk.in</li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg> +91 9234746465</li>
+          <li><svg aria-hidden="true"><use href="#i-clock"/></svg> Mon - Sat: 9AM - 7PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#latest"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Latest Jobs</a></li>
+          <li><a href="#admit-card"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Admit Card</a></li>
+          <li><a href="#result"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Results</a></li>
+          <li><a href="#answer-key"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Answer Key</a></li>
+          <li><a href="#college"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> College Updates</a></li>
+          <li><a href="#school"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> School Updates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Help &amp; Support</h3>
+        <ul>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> FAQs</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> How to Apply</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Support Center</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Feedback</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Report an Issue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Important Links</h3>
+        <ul>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> About Us</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Contact Us</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Privacy Policy</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Terms &amp; Conditions</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Disclaimer</a></li>
+          <li><a href="#"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg> Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2025 NaukriDesk. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#whatsapp" aria-label="Chat on WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
